@@ -44,7 +44,7 @@ import ProfileSettings from '@/components/ProfileSettings/ProfileSettings'
     const profileActionOptions = [{text: 'Products', component: 'products'}, {text: 'NFTs', component: 'nfts'}]
     const profileManagementOptions = [{text: 'Settings', component: 'settings'}, {text: 'Sign Out', component: 'signOut'}]
 
-    const handleAuth = async () => {
+    const handleAuth = async (wallet) => {
         if (isConnected) {
           await disconnectAsync();
         }
