@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@next/font": "13.1.6",
+    "aws-sdk": "^2.1324.0",
     "axios": "^1.3.4",
     "btoa": "^1.2.1",
     "eslint": "8.34.0",
