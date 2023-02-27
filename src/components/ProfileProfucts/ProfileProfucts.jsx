@@ -110,7 +110,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
 
         const { data } = await axios.post(`${process.env.CREATE_PRODUCT_EVENT_URL}`, createProductRequest, {
             headers: {
-                'content-type': 'application/json',
+                'Content-Type': 'application/json',
             },
         })
         console.log('craete product response data', data)
