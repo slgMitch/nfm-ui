@@ -108,7 +108,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
             }
         }
 
-        const { data } = await axios.post('/api/products/create-product-event', createProductRequest, {
+        const { data } = await axios.post(`${process.env.CREATE_PRODUCT_EVENT_URL}`, createProductRequest, {
             headers: {
                 'content-type': 'application/json',
             },
