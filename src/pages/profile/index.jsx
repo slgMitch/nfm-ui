@@ -63,7 +63,7 @@ import ProfileSettings from '@/components/ProfileSettings/ProfileSettings'
           message,
           signature,
           redirect: false,
-          callbackUrl: "/profile",
+          callbackUrl: pathname,
         });
         /**
          * instead of using signIn(..., redirect: "/user")
@@ -196,7 +196,7 @@ import ProfileSettings from '@/components/ProfileSettings/ProfileSettings'
                                                 <CardMedia 
                                                     sx={{ height: 350 }}
                                                     image="https://1000logos.net/wp-content/uploads/2022/05/WalletConnect-Logo.jpg"
-                                                    title="MetaMask"
+                                                    title="WalletConnect"
                                                 />
                                                 <CardContent>
                                                     <Typography textAlign='center'>Connect Using WalletConnect</Typography>
@@ -211,7 +211,7 @@ import ProfileSettings from '@/components/ProfileSettings/ProfileSettings'
                                                 <CardMedia 
                                                     sx={{ height: 350 }}
                                                     image="https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0"
-                                                    title="MetaMask"
+                                                    title="Coinbase"
                                                 />
                                                 <CardContent>
                                                     <Typography textAlign='center'>Connect CoinbaseWallet</Typography>
