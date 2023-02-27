@@ -6,7 +6,7 @@ import {
     connectDatabase, 
     insertDocuments,
     findDocumentsByQueryObject 
-} from 'utils/mongo-utils'
+} from '@/utils/mongo-utils'
 
 export default async function handler(req, res) {
         try {

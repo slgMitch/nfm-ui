@@ -1,4 +1,4 @@
-import { connectDatabase, findDocumentsByQueryObject } from '../../../../utils/mongo-utils'
+import { connectDatabase, findDocumentsByQueryObject } from '@/utils/mongo-utils'
 
 export default async function handler(req, res) {
         const { user } = req.query

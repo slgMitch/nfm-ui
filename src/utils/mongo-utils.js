@@ -35,6 +35,7 @@ export async function getAllDocuments(client, collection) {
 
 export async function findDocumentsByQueryObject(client, collection, queryObject) {
   const db = client.db();
+  
 
   const documents = await db
   .collection(collection)
