@@ -19,11 +19,11 @@ import {
   } from '@mui/material'
 import useSWR from 'swr'
 import axios from 'axios'
-import BaseProducts from './Steps/BaseProducts'
-import Images from './Steps/Images'
-import ImagePlacement from './Steps/ImagePlacement'
-import Review from './Steps/Review'
 import { useRouter } from 'next/router'
+import CreateProductBaseProducts from '../CreateProductBaseProducts/CreateProductBaseProducts'
+import CreateProductSelectImages from '../CreateProductSelectImages/CreateProductSelectImages'
+import CreateProductImagePlacement from '../CreateProductImagePlacement/CreateProductImagePlacement'
+import CreateProductReview from '../CreateProductReview/CreateProductReview'
 
 const createProductSteps = ['Select a Product', 'Select an image', 'Select image placement']
 
@@ -132,7 +132,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
     const renderStep = (activeStep) => {
         switch(activeStep) {
             case 0:
-                return <BaseProducts 
+                return <CreateProductBaseProducts 
                             baseProducts={baseProducts}
                             setSelectedBaseProduct={setSelectedBaseProduct}
                             setImagePlacements={setImagePlacements} 
@@ -141,7 +141,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
                             setMerchName={setMerchName}
                         />
             case 1:
-                return <Images
+                return <CreateProductSelectImages
                             user={user} 
                             userImages={userImages}
                             setSelectedUserImages={setSelectedUserImages}
@@ -149,7 +149,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
                             setCanGoToNextStep={setCanGoToNextStep} 
                         />
             case 2:
-                return <ImagePlacement 
+                return <CreateProductImagePlacement 
                             imagePlacements={imagePlacements}
                             setSelectedImagePlacement={setSelectedImagePlacement} 
                             selectedImagePlacement={selectedImagePlacement}
@@ -304,7 +304,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
                             {
                                 activeStep === createProductSteps.length ? (
                                     <Fragment>
-                                        <Review 
+                                        <CreateProductReview 
                                             selectedBaseProduct={selectedBaseProduct}
                                             selectedUserImages={selectedUserImages}
                                             selectedImagePlacement={selectedImagePlacement}
