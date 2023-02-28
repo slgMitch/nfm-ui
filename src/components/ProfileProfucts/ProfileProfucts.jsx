@@ -71,6 +71,7 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
     }
 
     const getBaseProducts = async () => {
+        console.log('url', process.env)
         const { data } = await axios.get('/api/base-products/get-all', {
             headers: {
                 'content-type': 'application/json',
@@ -107,10 +108,6 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
                 selectedImagePlacement
             }
         }
-
-        console.log('url', process.env.CREATE_PRODUCT_EVENT_URL)
-        console.log('SNIPCART_TEST_API_KEY', process.env.SNIPCART_TEST_API_KEY)
-        console.log('API_BASE_DOMAIN', process.env.API_BASE_DOMAIN)
 
         const { data } = await axios.post(`${process.env.CREATE_PRODUCT_EVENT_URL}`, createProductRequest, {
             headers: {
