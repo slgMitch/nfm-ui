@@ -71,7 +71,6 @@ const createProductSteps = ['Select a Product', 'Select an image', 'Select image
     }
 
     const getBaseProducts = async () => {
-        console.log('url', process.env)
         const { data } = await axios.get('/api/base-products/get-all', {
             headers: {
                 'content-type': 'application/json',
